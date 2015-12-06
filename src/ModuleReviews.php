@@ -4,6 +4,7 @@ namespace TMCms\Modules\Reviews;
 
 use neTpyceB\TMCms\Modules\IModule;
 use neTpyceB\TMCms\Traits\singletonInstanceTrait;
+use TMCms\Modules\Reviews\Entity\ReviewEntityRepository;
 
 class ModuleReviews implements IModule {
     use singletonInstanceTrait;
