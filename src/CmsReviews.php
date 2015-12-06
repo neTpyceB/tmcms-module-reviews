@@ -15,6 +15,8 @@ use neTpyceB\TMCms\HTML\Cms\Columns;
 use neTpyceB\TMCms\Log\App;
 use neTpyceB\TMCms\Modules\Gallery\ModuleGallery;
 use neTpyceB\TMCms\Modules\Images\Object\ImageCollection;
+use TMCms\Modules\Reviews\Entity\ReviewEntity;
+use TMCms\Modules\Reviews\Entity\ReviewEntityRepository;
 
 class CmsReviews {
     public function _default()

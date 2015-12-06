@@ -1,6 +1,6 @@
 <?php
 
-namespace TMCms\Modules\Reviews;
+namespace TMCms\Modules\Reviews\Entity;
 
 use neTpyceB\TMCms\Orm\EntityRepository;
 
