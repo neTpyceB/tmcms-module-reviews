@@ -1,0 +1,9 @@
+CREATE TABLE `m_reviews` (
+ `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+ `active` tinyint(1) unsigned DEFAULT '0',
+ `title` int(10) unsigned NOT NULL COMMENT 'translation',
+ `description` int(10) unsigned NOT NULL COMMENT 'translation',
+ `name` int(10) unsigned NOT NULL,
+ `image` varchar(255) NOT NULL,
+ PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8
