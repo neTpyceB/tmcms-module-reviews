@@ -14,7 +14,7 @@ use TMCms\HTML\Cms\Column\ColumnImg;
 use TMCms\HTML\Cms\Columns;
 use TMCms\Log\App;
 use TMCms\Modules\Gallery\ModuleGallery;
-use TMCms\Modules\Images\Object\ImageCollection;
+use TMCms\Modules\Images\Entity\ImageCollection;
 use TMCms\Modules\Reviews\Entity\ReviewEntity;
 use TMCms\Modules\Reviews\Entity\ReviewEntityRepository;
 
