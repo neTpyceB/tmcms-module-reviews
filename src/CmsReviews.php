@@ -14,7 +14,7 @@ use TMCms\HTML\Cms\Column\ColumnImg;
 use TMCms\HTML\Cms\Columns;
 use TMCms\Log\App;
 use TMCms\Modules\Gallery\ModuleGallery;
-use TMCms\Modules\Images\Entity\ImageCollection;
+use TMCms\Modules\Images\Entity\ImageRepository;
 use TMCms\Modules\Reviews\Entity\ReviewEntity;
 use TMCms\Modules\Reviews\Entity\ReviewEntityRepository;
 
@@ -31,7 +31,7 @@ class CmsReviews {
         $reviews->addSimpleSelectFieldsAsString('"0" as `images`');
         $reviews->addOrderByField('id');
 
-        $images = new ImageCollection();
+        $images = new ImageRepository();
         $images->addSimpleSelectFieldsAsString('(SELECT COUNT(*) FROM `'. $images->getDbTableName() .'` WHERE `item_id` = `'. $reviews->getDbTableName() .'`.`id` AND `item_type` = "review") AS `images`');
 
         $reviews->mergeWithCollection($images, 'id', 'item_id', 'left');
