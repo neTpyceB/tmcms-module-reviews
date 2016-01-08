@@ -48,7 +48,7 @@ class CmsReviews {
             ->addColumn(ColumnData::getInstance('images')
                 ->enableOrderableColumn()
                 ->setWidth('1%')
-                ->setAlignRight()
+                ->enableRightAlign()
                 ->setHref('?p='. P .'&do=images&id={%id%}')
             )
             ->addColumn(ColumnActive::getInstance('active')
