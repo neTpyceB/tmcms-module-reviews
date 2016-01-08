@@ -2,7 +2,7 @@
 
 namespace TMCms\Modules\Reviews\Entity;
 
-use neTpyceB\TMCms\Orm\EntityRepository;
+use TMCms\Orm\EntityRepository;
 
 /**
  * Class ReviewEntityRepository

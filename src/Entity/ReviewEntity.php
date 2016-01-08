@@ -2,8 +2,8 @@
 
 namespace TMCms\Modules\Reviews\Entity;
 
-use neTpyceB\TMCms\Orm\Entity;
-use neTpyceB\TMCms\Modules\Images\ModuleImages;
+use TMCms\Orm\Entity;
+use TMCms\Modules\Images\ModuleImages;
 
 /**
  * Class ReviewEntity

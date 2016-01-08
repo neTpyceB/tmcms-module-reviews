@@ -2,19 +2,19 @@
 
 namespace TMCms\Modules\Reviews;
 
-use neTpyceB\TMCms\Admin\Messages;
-use neTpyceB\TMCms\HTML\BreadCrumbs;
-use neTpyceB\TMCms\HTML\Cms\CmsFormHelper;
-use neTpyceB\TMCms\HTML\Cms\CmsTable;
-use neTpyceB\TMCms\HTML\Cms\Column\ColumnActive;
-use neTpyceB\TMCms\HTML\Cms\Column\ColumnData;
-use neTpyceB\TMCms\HTML\Cms\Column\ColumnDelete;
-use neTpyceB\TMCms\HTML\Cms\Column\ColumnEdit;
-use neTpyceB\TMCms\HTML\Cms\Column\ColumnImg;
-use neTpyceB\TMCms\HTML\Cms\Columns;
-use neTpyceB\TMCms\Log\App;
-use neTpyceB\TMCms\Modules\Gallery\ModuleGallery;
-use neTpyceB\TMCms\Modules\Images\Object\ImageCollection;
+use TMCms\Admin\Messages;
+use TMCms\HTML\BreadCrumbs;
+use TMCms\HTML\Cms\CmsFormHelper;
+use TMCms\HTML\Cms\CmsTable;
+use TMCms\HTML\Cms\Column\ColumnActive;
+use TMCms\HTML\Cms\Column\ColumnData;
+use TMCms\HTML\Cms\Column\ColumnDelete;
+use TMCms\HTML\Cms\Column\ColumnEdit;
+use TMCms\HTML\Cms\Column\ColumnImg;
+use TMCms\HTML\Cms\Columns;
+use TMCms\Log\App;
+use TMCms\Modules\Gallery\ModuleGallery;
+use TMCms\Modules\Images\Object\ImageCollection;
 use TMCms\Modules\Reviews\Entity\ReviewEntity;
 use TMCms\Modules\Reviews\Entity\ReviewEntityRepository;
 
