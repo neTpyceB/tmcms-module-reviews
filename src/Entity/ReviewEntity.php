@@ -16,7 +16,6 @@ use TMCms\Modules\Images\ModuleImages;
  * @method string getTitle()
  */
 class ReviewEntity extends Entity {
-    protected $db_table = 'm_reviews';
     protected $translation_fields = ['title', 'description', 'name'];
 
     protected function beforeDelete() {
