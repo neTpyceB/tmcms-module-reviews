@@ -1,15 +1,15 @@
 {
-  "name": "neTpyceB/TMCms-module-reviews",
+  "name": "devp-eu/tmcms-module-reviews",
   "type": "library",
   "description": "Module Customer Reviews for TMCms",
   "keywords": ["module", "reviews"],
-  "homepage": "http://devp.lv/",
+  "homepage": "http://devp.eu/",
   "license": "proprietary",
   "authors": [
     {
       "name": "Vadims Petrusevs",
-      "email": "info@devp.lv",
-      "homepage": "http://devp.lv/",
+      "email": "info@devp.eu",
+      "homepage": "http://devp.eu/",
       "role": "Developer"
     }
   ],
