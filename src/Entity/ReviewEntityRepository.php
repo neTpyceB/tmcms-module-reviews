@@ -3,6 +3,7 @@
 namespace TMCms\Modules\Reviews\Entity;
 
 use TMCms\Orm\EntityRepository;
+use TMCms\Orm\TableStructure;
 
 /**
  * Class ReviewEntityRepository
@@ -15,13 +16,13 @@ class ReviewEntityRepository extends EntityRepository {
     protected $table_structure = [
         'fields' => [
             'title' => [
-                'type' => 'translation',
+                'type' => TableStructure::FIELD_TYPE_TRANSLATION,
             ],
             'description' => [
-                'type' => 'translation',
+                'type' => TableStructure::FIELD_TYPE_TRANSLATION,
             ],
             'name' => [
-                'type' => 'translation',
+                'type' => TableStructure::FIELD_TYPE_TRANSLATION,
             ],
             'image' => [
                 'type' => 'varchar',
