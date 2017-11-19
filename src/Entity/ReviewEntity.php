@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace TMCms\Modules\Reviews\Entity;
 
@@ -14,10 +15,14 @@ use TMCms\Modules\Images\ModuleImages;
  * @method string getImage()
  * @method string getName()
  * @method string getTitle()
+ * @method string getTs()
  */
 class ReviewEntity extends Entity {
-    protected $translation_fields = ['title', 'description', 'name'];
+    protected $translation_fields = [ReviewEntityRepository::FIELD_TITLE, ReviewEntityRepository::FIELD_DESCRIPTION, ReviewEntityRepository::FIELD_NAME];
 
+    /**
+     * Auto-call before object is Deleted
+     */
     protected function beforeDelete() {
         // Delete all related Images
         ModuleImages::deleteEntityImages($this);
