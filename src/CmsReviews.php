@@ -144,6 +144,8 @@ class CmsReviews {
             return;
         }
 
+        $_POST['ts'] = strtotime($_POST['ts']);
+
         $review = new ReviewEntity($id);
         $review->loadDataFromArray($_POST);
         $review->save();
