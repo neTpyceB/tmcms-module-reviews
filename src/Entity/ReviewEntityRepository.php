@@ -31,6 +31,9 @@ class ReviewEntityRepository extends EntityRepository {
             'image' => [
                 'type' => TableStructure::FIELD_TYPE_VARCHAR_255,
             ],
+            'rating' => [
+                'type' => TableStructure::FIELD_TYPE_FLOAT_DECIMAL,
+            ],
             'ts' => [
                 'type' => TableStructure::FIELD_TYPE_UNSIGNED_INTEGER,
             ],

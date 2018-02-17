@@ -14,6 +14,7 @@ use TMCms\Modules\Images\ModuleImages;
  * @method string getDescription()
  * @method string getImage()
  * @method string getName()
+ * @method float getRating()
  * @method string getTitle()
  * @method string getTs()
  */

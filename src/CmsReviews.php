@@ -85,6 +85,12 @@ class CmsReviews {
                     'type' => 'textarea',
                     'translation' => true
                 ],
+                'rating' => [
+                    'type' => 'number',
+                    'step' => 0.1,
+                    'min' => 0,
+                    'max' => 5,
+                ],
             ]
         ];
 
@@ -111,7 +117,7 @@ class CmsReviews {
 
         $review = new ReviewEntity($id);
 
-        echo BreadCrumbs::getInstance()
+        BreadCrumbs::getInstance()
             ->addCrumb(ucfirst(P), '?p='. P)
             ->addCrumb('Edit Review')
             ->addCrumb($review->getTitle())
