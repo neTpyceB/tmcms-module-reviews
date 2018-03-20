@@ -37,6 +37,9 @@ class ModuleReviews implements IModule {
         $reviews->addOrderByField('ts', true);
         $reviews->setWhereActive(true);
 
+        // Skip reviews without title in current languages
+        $reviews->addWhereFieldIsNot('title', '');
+
         if ($entity) {
             $attachments = new ReviewAttachmentEntityRepository();
             $attachments->setWhereEntityId($entity->getId());
