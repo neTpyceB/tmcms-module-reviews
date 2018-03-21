@@ -69,7 +69,7 @@ class CmsReviews {
             'fields' => [
                 'image' => [
                     'edit' => 'files',
-                    'path' => DIR_IMAGES_URL . 'reviews'
+                    'path' => DIR_IMAGES_URL . 'reviews/'
                 ],
                 'ts' => [
                     'title' => __('Date'),
