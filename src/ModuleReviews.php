@@ -11,6 +11,7 @@ use TMCms\Log\App;
 use TMCms\Modules\IModule;
 use TMCms\Modules\Reviews\Entity\ReviewAttachmentEntity;
 use TMCms\Modules\Reviews\Entity\ReviewAttachmentEntityRepository;
+use TMCms\Modules\Reviews\Entity\ReviewEntity;
 use TMCms\Orm\Entity;
 use TMCms\Traits\singletonInstanceTrait;
 use TMCms\Modules\Reviews\Entity\ReviewEntityRepository;
@@ -116,5 +117,23 @@ class ModuleReviews implements IModule {
         App::add('Review attachments updated for Entity "'. $_POST['entity_type'] .'" with id "'. $_POST['entity_id'] .'"');
 
         back();
+    }
+
+    /**
+     * Create review and attach it
+     *
+     * @param ReviewEntity $review
+     * @param Entity $attach_to_item
+     *
+     * @return ReviewAttachmentEntity
+     */
+    public static function attachReviewToAnotherEntity(ReviewEntity $review, Entity $attach_to_item): ReviewAttachmentEntity
+    {
+        $attach = new ReviewAttachmentEntity();
+        $attach->setReviewId($review->getId());
+        $attach->setEntityId($attach_to_item->getId());
+        $attach->setEntityType($attach_to_item->getUnqualifiedShortClassName());
+
+        return $attach->save();
     }
 }
