@@ -205,34 +205,24 @@ class CmsReviews {
 
     /** IMAGES */
     public function images() {
-        $id = abs((int)$_GET['review_id']);
-        if (!$id) {
-            return;
-        }
-
-        $review = new ReviewEntity($id);
-
-        echo ModuleGallery::getViewForCmsModules($review);
+        echo ModuleGallery::getViewForCmsModules(new ReviewEntity($_GET['review_id']));
     }
 
     public function _images_delete() {
-        $id = abs((int)$_GET['id']);
-        if (!$id) {
-            return;
-        }
-
-        ModuleGallery::deleteImageForCmsModules($id);
+        ModuleGallery::deleteImageForCmsModules($_GET['id']);
 
         back();
     }
 
-    public function _images_move() {
-        $id = abs((int)$_GET['id']);
-        if (!$id) {
-            return;
-        }
+    public function _images_active()
+    {
+        ModuleGallery::activeImageForCmsModules($_GET['id']);
 
-        ModuleGallery::orderImageForCmsModules($id, $_GET['direct']);
+        back();
+    }
+
+    public function _images_order() {
+        ModuleGallery::orderImageForCmsModules($_GET['id'], $_GET['direct']);
 
         back();
     }
